@@ -2,31 +2,37 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-        <style>@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Crete+Round&family=Exo:wght@400;500;700&display=swap');</style>
         <title>Travel Agency</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f5de6ae6d2.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header>
-            <div class="wrapper">
-                <h1>Travel Agency<span class="orange">.</span></h1>
-                <p>#</p>
-                <nav>
-                    <ul>
-                        <li><a href="#main-image">Accueil</a></li>
-                        <li><a href="#steps">Destinations</a></li>
-                        <li><a href="#possibilities">Circuits</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+        <nav class="navbar">
+            <div class="container">
+                <div id="responsive">
+                    <h2>Travel Agency<span class="orange">.</span></h2>
+                    <a href="javascript:void(0);" class="icon" onclick='myFunction()'>
+                        <i class="fa fa-bars"></i>
+                    </a>                    
+                </div>
+
+                <div class="topnav" id="myTopnav">
+                    <a href="#main-image">Accueil</a>
+                    <a href="#steps">Destinations</a>
+                    <a href="#possibilities">Circuits</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-        </header>
+        </nav>
 
         <section id="main-image">
             <div>
-                <h2>Organisez votre<br><strong>voyage sur mesure</strong></h2>
+                <h1>Organisez votre<br><strong>voyage sur mesure</strong></h1>
                 <a href="Youtube.html" class="button-1">Par ici</a>
             </div>       
         </section>
@@ -97,10 +103,21 @@
 
         <footer>
             <div class="wrapper">
-                <h1>Travel Agency<span class="orange">.</span></h1>
-                <div class="copyright">Copyright © 2016. Tous droits réservés.</div>
+                <h2>Travel Agency<span class="orange">.</span></h2>
+                <div class="copyright">Copyright © 2024. Tous droits réservés.</div>
             </div>      
         </footer>
+
+        <script>
+            function myFunction() {
+                const x = document.getElementById("myTopnav");
+                /* Correction du npm run build */
+                
+                if (x) { // Vérifiez si l'élément avec l'ID "myTopnav" existe
+                    x.classList.toggle("responsive");
+                }
+            }
+        </script>
     </body>
 
 </html>
