@@ -104,11 +104,13 @@
         <footer>
             <div class="wrapper">
                 <h2>Travel Agency<span class="orange">.</span></h2>
-                <div class="copyright">Copyright © 2024. Tous droits réservés.</div>
+                <p class="copyright">
+                    &copy;
+                    <span id="footer-year"><script></script> Copyright.</span> Tous droits réservés.</p>
             </div>      
         </footer>
 
-        <script>
+        <script async>
             function myFunction() {
                 const x = document.getElementById("myTopnav");
                 /* Correction du npm run build */
@@ -117,6 +119,9 @@
                     x.classList.toggle("responsive");
                 }
             }
+            const footerYear = document.querySelector('#footer-year');
+            console.log(new Date().getFullYear())
+            footerYear.innerHTML = new Date().getFullYear();
         </script>
     </body>
 
