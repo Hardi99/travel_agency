@@ -17,7 +17,7 @@
                 <div id="responsive">
                     <h2>Travel Agency<span class="orange">.</span></h2>
                     <a href="javascript:void(0);" class="icon" onclick='myFunction()'>
-                        <i class="fa fa-bars"></i>
+                        ☰
                     </a>                    
                 </div>
 
@@ -111,13 +111,18 @@
         </footer>
 
         <script async>
+
             function myFunction() {
-                const x = document.getElementById("myTopnav");
-                /* Correction du npm run build */
-                
-                if (x) { // Vérifiez si l'élément avec l'ID "myTopnav" existe
-                    x.classList.toggle("responsive");
-                }
+              var x = document.getElementsByClassName("topnav")[0];
+              var y = document.getElementsByClassName("icon")[0];
+            
+              if (x.className === "topnav") {
+                  x.className += " responsive";
+                  y.innerHTML = "&#10005;"; // Change burger to cross
+              } else {
+                  x.className = "topnav";
+                  y.innerHTML = "&#9776;"; // Change cross back to burger
+              }
             }
             const footerYear = document.querySelector('#footer-year');
             console.log(new Date().getFullYear())
